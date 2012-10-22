@@ -17,6 +17,7 @@ a {
     color: #333;
 }
 .top-nav .inner, .content{
+    position: relative;
     width: 980px;
     margin: 0 auto;
 }
@@ -28,6 +29,9 @@ a {
     height: 40px;
     width:100%;
 }
+.top-nav .inner{
+    height: 40px;
+}
 .pull-right{
     float:right;
 }
@@ -35,7 +39,9 @@ a {
     float:left;
 }
 .search{
-    position:relative;
+    position:absolute;
+    right:0px;
+    top: 0px;
 }
 .search input[type="text"]{
     margin-top: 6px;
@@ -49,6 +55,7 @@ a {
 }
 .search input[type="submit"]{
     position:absolute;
+    text-transform: capitalize;
     text-indent: -9999em;
     background: url("img/search_btn.png") top left;
     width: 52px;
@@ -60,7 +67,7 @@ a {
 }
 .content{
     margin-top: 120px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 .striped{
     background: url("img/nav_bg.png") top left repeat;
@@ -73,6 +80,10 @@ a {
 .tab-nav li{
     display: inline-block;
     border-bottom: 4px solid transparent;
+    /*IE FIX:*/
+    zoom:1; 
+    *display: inline; 
+    _height: 46px;
 }
 .tab-nav a, .static-links a{
     display: block;
@@ -115,8 +126,12 @@ a {
     font-size: 18px;
     margin-top: 50px;
 }
+.main-links{
+    overflow:hidden;
+}
 .content-column{
-    display:inline-block;
+    display:block;
+    float:left;
     width: 300px;
     margin-right: 15px;
 }
@@ -159,6 +174,10 @@ a {
 }
 .static-links li{
     display:inline-block;
+    /*IE FIX:*/
+    zoom:1; 
+    *display: inline; 
+    _height: 46px;
 }
 .static-links a{
     font-size: 13px;
